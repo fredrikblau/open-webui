@@ -34,6 +34,8 @@ WORKDIR /app
 # to store git revision in build
 RUN apk add --no-cache git
 
+ENV NODE_OPTIONS="--max-old-space-size=8192"
+
 COPY package.json package-lock.json ./
 RUN npm ci --force
 

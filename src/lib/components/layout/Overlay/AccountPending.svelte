@@ -23,7 +23,7 @@
 		class="absolute w-full h-full backdrop-blur-lg bg-white/10 dark:bg-gray-900/50 flex justify-center"
 	>
 		<div class="m-auto pb-10 flex flex-col justify-center">
-			<div class="max-w-md">
+			<div class="max-w-md px-2" style="direction: rtl;">
 				<div
 					class="text-center dark:text-white text-2xl font-medium z-50"
 					style="white-space: pre-wrap;"
@@ -32,30 +32,26 @@
 						{$config.ui.pending_user_overlay_title}
 					{:else}
 						{$i18n.t('Account Activation Pending')}<br />
-						{$i18n.t('Contact Admin for WebUI Access')}
+						<!-- {$i18n.t('Contact Admin for WebUI Access')} -->
 					{/if}
 				</div>
 
 				<div
-					class=" mt-4 text-center text-sm dark:text-gray-200 w-full"
+					class="mt-4 text-center text-sm dark:text-gray-200 w-full"
 					style="white-space: pre-wrap;"
 				>
-					{#if ($config?.ui?.pending_user_overlay_content ?? '').trim() !== ''}
-						{@html marked.parse(
-							DOMPurify.sanitize(
-								($config?.ui?.pending_user_overlay_content ?? '').replace(/\n/g, '<br>')
-							)
-						)}
-					{:else}
-						{$i18n.t('Your account status is currently pending activation.')}{'\n'}{$i18n.t(
-							'To access the WebUI, please reach out to the administrator. Admins can manage user statuses from the Admin Panel.'
-						)}
-					{/if}
+از اینکه در نسخه اولیه و آزمایشی (Beta) هوش مصنوعی ما ثبت‌نام کردید، متشکریم!
+
+به دلیل محدودیت‌های ظرفیت در فاز آزمایشی، دسترسی‌ها به صورت دستی و تدریجی تأیید می‌شوند. هدف ما اطمینان از عملکرد پایدار برای همه کاربران آزمایشی است.
+
+در حال حاضر، لطفاً منتظر بمانید. مدیر سیستم به زودی حساب شما را بررسی و فعال خواهد کرد. پس از تأیید، ایمیلی برای شما ارسال خواهد شد.
+
+در صورت نیاز به تسریع در دسترسی، لطفاً با ما تماس بگیرید:
 				</div>
 
 				{#if adminDetails}
 					<div class="mt-4 text-sm font-medium text-center">
-						<div>{$i18n.t('Admin')}: {adminDetails.name} ({adminDetails.email})</div>
+						<div>{$i18n.t('Admin')}: ({adminDetails.email})</div>
 					</div>
 				{/if}
 

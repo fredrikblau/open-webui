@@ -8,7 +8,7 @@
 	import SlideShow from './common/SlideShow.svelte';
 	import ArrowRightCircle from './icons/ArrowRightCircle.svelte';
 
-	export let show = true;
+	export let show = false;
 	export let getStartedHandler = () => {};
 
 	function setLogoImage() {

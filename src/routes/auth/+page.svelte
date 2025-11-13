@@ -196,7 +196,11 @@
 	}}
 />
 
-<div class="w-full h-screen max-h-[100dvh] text-white relative" id="auth-page">
+<div
+	class="w-full h-screen max-h-[100dvh] text-white relative"
+	style="direction: rtl;"
+	id="auth-page"
+>
 	<div class="w-full h-full absolute top-0 left-0 bg-white dark:bg-black"></div>
 
 	<div class="w-full absolute top-0 left-0 right-0 h-8 drag-region" />
@@ -243,7 +247,7 @@
 								}}
 							>
 								<div class="mb-1">
-									<div class=" text-2xl font-medium">
+									<!-- <div class=" text-2xl font-medium">
 										{#if $config?.onboarding ?? false}
 											{$i18n.t(`Get started with {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 										{:else if mode === 'ldap'}
@@ -253,6 +257,34 @@
 										{:else}
 											{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 										{/if}
+									</div> -->
+									<div class="max-w-md">
+										<h1 class="text-2xl font-bold mb-4 leading-relaxed">
+											جعوک راهنمایی برای کشف، نه فقط یک مسیر
+										</h1>
+										<p class="text-sm leading-7 mb-4">
+											جعوک یک هوش مصنوعی برای سفرهای پرماجرا است. در گام نخست، جعوک با تمرکز بر قشم
+											و جزایر اطراف، به گردشگران و ساکنان کمک می‌کند تا در کوتاه‌ترین زمان، به
+											دقیق‌ترین و کاربردی‌ترین اطلاعات دسترسی داشته باشند.
+										</p>
+
+										<p class="text-sm leading-7 mb-4">
+											جعوک، راهنمای بومی هوشمند شما در سفر به قشم است. از جاذبه‌های طبیعی و تاریخی
+											گرفته تا فرهنگ و آداب محلی، اقامتگاه‌ها، رستوران‌ها، کافه‌ها و مراکز خرید و…
+											هر آنچه باید پیش از سفر بدانید در جعوک گردآوری شده است. با جعوک، سفر به قشم و
+											جزایر اطراف تجربه‌ای آسان‌تر، آگاهانه‌تر و لذت‌بخش‌تر خواهد بود.
+										</p>
+
+										<p class="text-sm leading-7 mb-4">
+											جعوک تنها برای گردشگران نیست. می‌توانید با جعوک به‌سرعت تعمیرکاران تخصصی،
+											خدمات درمانی، فروشگاه‌ها، مراکز اداری و سایر خدمات شهری را پیدا کنید.
+										</p>
+
+										<p class="text-sm leading-7 mb-4">
+											کسب‌وکارهای محلی نیز می‌توانند با حضور در جعوک، بهتر دیده شوند و مشتریان
+											بیشتری جذب کنند. تمامی این امکانات به‌صورت کاملاً رایگان در اختیار کاربران و
+											صاحبان کسب‌وکار قرار دارد.
+										</p>
 									</div>
 
 									{#if $config?.onboarding ?? false}

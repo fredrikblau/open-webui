@@ -321,7 +321,7 @@
     "Content": "محتوا",
     "Content Extraction Engine": "موتور استخراج محتوا",
     "Continue Response": "ادامه پاسخ",
-    "Continue with {{provider}}": "با {{provider}} ادامه دهید",
+    "Continue with {{provider}}": "ورود به جعوک با {{provider}}",
     "Continue with Email": "با ایمیل ادامه دهید",
     "Continue with LDAP": "با LDAP ادامه دهید",
     "Control how message text is split for TTS requests. 'Punctuation' splits into sentences, 'paragraphs' splits into paragraphs, and 'none' keeps the message as a single string.": "کنترل نحوه تقسیم متن پیام برای درخواست‌های TTS. 'علامت‌گذاری' به جملات تقسیم می‌کند، 'پاراگراف‌ها' به پاراگراف‌ها تقسیم می‌کند و 'هیچ‌کدام' پیام را به عنوان یک رشته واحد نگه می‌دارد.",

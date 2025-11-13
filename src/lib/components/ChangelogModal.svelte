@@ -22,10 +22,6 @@
 	const init = async () => {
 		changelog = await getChangelog();
 	};
-
-	$: if (show) {
-		init();
-	}
 </script>
 
 <Modal bind:show size="xl">

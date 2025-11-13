@@ -207,7 +207,7 @@
 
 	{#if loaded}
 		<div
-			class="relative bg-transparent h-screen overflow-y-scroll font-primary z-50 text-black dark:text-white"
+			class="relative bg-transparent h-screen overflow-y-scroll font-primary z-50 text-black dark:text-white pb-24"
 			id="auth-container"
 		>
 			<div class="w-full px-2 min-h-screen flex flex-col text-center">
@@ -217,7 +217,7 @@
 							<img
 								id="logo"
 								crossorigin="anonymous"
-								src="{WEBUI_BASE_URL}/favicon.png"
+								src="{WEBUI_BASE_URL}/static/logotext.png"
 								class="size-24 rounded-full"
 								alt=""
 							/>
@@ -266,12 +266,15 @@
 
 								<hr class="w-32 h-px my-4 border-0 dark:bg-gray-100/10 bg-gray-700/10" />
 							</div>
-							<div
-								class="sticky bottom-0 left-0 w-full bg-white/70 dark:bg-black/60 backdrop-blur-md py-2"
-							>
+							<div class="fixed bottom-0 left-0 w-full z-50">
 								{#if $config?.oauth?.providers?.google}
 									<button
-										class="flex justify-center items-center w-full bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white text-white rounded-xl font-semibold text-base py-3.5 transition-colors shadow-lg"
+										class="flex justify-center items-center w-full
+		bg-gray-200 hover:bg-gray-300
+		dark:bg-gray-850 dark:hover:bg-gray-700
+		dark:text-gray-300 dark:hover:text-white
+		transition font-medium text-sm py-4
+		border-t border-gray-300/40 dark:border-gray-700/60"
 										on:click={() => {
 											window.location.href = `${WEBUI_BASE_URL}/oauth/google/login`;
 										}}
